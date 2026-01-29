@@ -59,7 +59,7 @@ def run_etl():
     merged_df.to_sql('Launavísitala&Verðbólga', engine, if_exists='replace', index=False)
 
     # Export into CSV
-    merged_df.to_csv("data/merged_data_for_jamovi.csv", index=False, sep=';', encoding='utf-8-sig')
+    merged_df.to_csv("data/merged_data.csv", index=False, sep=';', encoding='utf-8-sig')
 
     print(f"   - Wage Index: {len(wage_df)} rows transferred.")
     print(f"   - Inflation: {len(inflation_df)} rows transferred.")
